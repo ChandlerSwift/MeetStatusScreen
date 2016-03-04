@@ -1,6 +1,8 @@
+<?php include_once "settings.php"; ?>
 <!DOCTYPE html>
 <html>
 	<head>
+    <title><?= $teamname ?> FRC Match Information</title> 
 		<script src="js/jquery-2.1.3.min.js"></script>
 		<link href="css/weather-icons.min.css" rel="stylesheet">
 		<script>
@@ -176,7 +178,7 @@
 	<body>
 		<a href="dash"><div id="header">
 			<div id="header-brand">
-				<p>Predators - <?php include("settings.php"); echo $team; ?></p>
+				<p><?= $teamname ?> &ndash; <?= $team ?></p>
 			</div>
 			<div id="header-weather"></div>
 		</div></a>
