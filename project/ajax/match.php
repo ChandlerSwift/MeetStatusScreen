@@ -1,7 +1,6 @@
 <?php
 include '../settings.php';
-$con=mysqli_connect("127.0.0.1","mss","robot","mss");
-
+$con=mysqli_connect($db['host'], $db['user'], $db['password'], $db['database']);
 $date = date('H:i:s');
 
 $clock = date('g:i');
