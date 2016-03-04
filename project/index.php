@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<script src="js/jquery-2.1.3.min.js"></script>
-		<script src="js/countdown.js"></script>
 		<link href="css/weather-icons.min.css" rel="stylesheet">
 		<script>
 			var isTimeoutSet = "no";
