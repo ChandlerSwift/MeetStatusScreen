@@ -1,4 +1,5 @@
 <?php
+  $teamname = "The Predators";
   $team = "4665"; // This should be your FRC team number
   $timezone = "America/Chicago"; // Time zone for clock setting in PHP
   $city = "Glencoe"; //The city for your weather data
@@ -8,7 +9,7 @@
   
   // Database information: 
   $db['host'] = '127.0.0.1';
-  $db['user'] = 'mss';
-  $db['password'] = 'robot';
-  $db['database'] = 'mss';
+  $db['user'] = 'test';
+  $db['password'] = 'test';
+  $db['database'] = 'test';
 ?>
