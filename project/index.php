@@ -1,8 +1,8 @@
-<?php include_once "settings.php"; ?>
+<?php include_once "config.php"; ?>
 <!DOCTYPE html>
 <html>
 	<head>
-    <title><?= $teamname ?> FRC Match Information</title> 
+    <title><?= $config['teamname'] ?> FRC Match Information</title> 
 		<script src="js/jquery-2.1.3.min.js"></script>
 		<link href="css/weather-icons.min.css" rel="stylesheet">
 		<script>
@@ -12,7 +12,7 @@
 				updateWeather();
 				setInterval(updateWeather,60000); // One Minute
 				updateTime();
-				setInterval(updateTime,200);
+				//setInterval(updateTime,200);
 				updateTeams();
 				updateNum(); // Get Match Number
 			});
@@ -20,7 +20,7 @@
 				$.get( "ajax/weather.php", function( data ) {
 					$( "#header-weather" ).html( data );
 					if (/alien/.test(data)) {			// If "Alien" is found in the data, then there is an error.
-					setTimeout(updateWeather,1000);		// Try again in a second.
+					//setTimeout(updateWeather,1000);		// Try again in a second.
 					}
 				});
 			}
@@ -178,7 +178,7 @@
 	<body>
 		<a href="dash"><div id="header">
 			<div id="header-brand">
-				<p><?= $teamname ?> &ndash; <?= $team ?></p>
+				<p><?= $config['teamname'] ?> &ndash; <?= $config['team'] ?></p>
 			</div>
 			<div id="header-weather"></div>
 		</div></a>

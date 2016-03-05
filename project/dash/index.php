@@ -1,6 +1,8 @@
-<?php $con=mysqli_connect("127.0.0.1","mss","robot","mss");
+<?php
 
-include('../settings.php');
+include('../config.php');
+
+$con=mysqli_connect($config['db']['host'], $config['db']['user'], $config['db']['password'], $config['db']['database']);
 
 $date = date ('H:i:s');
 
@@ -28,18 +30,7 @@ $b1 = $_POST['B1'];
 $b2 = $_POST['B2'];
 $b3 = $_POST['B3'];
 
-
 $sql = "INSERT INTO `event` (`Match`, `time`, `R1`, `R2`, `R3`, `B1`, `B2`, `B3`) VALUES ('" . $match . "', '" . $time . "', '" . $r1 . "', '" . $r2 . "', '" . $r3 . "', '" . $b1 . "', '" . $b2 . "', '" . $b3 . "')";
-/*
-[Mon Mar 09 00:24:28.587589 2015] [:error] [pid 13777] [client 10.240.169.157:44876]
-PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct():
-Failed to parse time string (1) at position 0 (1): Unexpected character' in
-/home/ubuntu/workspace/project/dash/index.php:19
-Stack trace:
-#0 /home/ubuntu/workspace/project/dash/index.php(19): DateTime->__construct('1')
-#1 {main}
-thrown in /home/ubuntu/workspace/project/dash/index.php on line 19, referer: https://meetstatusscreen-chandlerswift.c9.io/project/dash/
-*/
 $con->query($sql);
 }
 ?>

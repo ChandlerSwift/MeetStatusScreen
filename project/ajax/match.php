@@ -1,6 +1,7 @@
 <?php
-include '../settings.php';
-$con=mysqli_connect($db['host'], $db['user'], $db['password'], $db['database']);
+include '../config.php';
+  date_default_timezone_set($config['timezone']);
+$con=mysqli_connect($config['db']['host'], $config['db']['user'], $config['db']['password'], $config['db']['database']);
 $date = date('H:i:s');
 
 $clock = date('g:i');

@@ -1,6 +1,6 @@
 <?php
 	
-	include '../settings.php';
+	include '../config.php';
 	
 	$url = "http://api.openweathermap.org/data/2.5/weather?q=" . $city  . "," . $state;
 	
@@ -93,7 +93,7 @@
 					<?php echo $temp; ?>
 					</div>
 					<div id="header-weather-location">
-						<?php echo $city . ', ' . $state; ?>
+						<?php echo $config['city'] . ', ' . $config['state']; ?>
 						<br>
 						<?php echo $description; ?>
 					</div>
